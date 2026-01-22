@@ -1,0 +1,19 @@
+backend:
+node JS
+Javascript
+Mongo DB
+Express JS
+
+
+
+
+frontend:
+react JS
+next JS
+redux toolkit
+html
+css
+tailwind css
+git
+material ui
+
