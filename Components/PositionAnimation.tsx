@@ -431,7 +431,7 @@ const PositionAnimation: React.FC<HeroPositionProps> = ({ onComplete }) => {
       variants={container}
       initial="hidden"
       animate={controls}
-      className="flex mt-4 font-semibold tracking-[0.15em] z-[110]"
+      className="flex mt-4 font-semibold tracking-[0.15em] z-[120]"
     >
       {text.split("").map((char, index) => (
         <motion.span

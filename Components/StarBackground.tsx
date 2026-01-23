@@ -124,6 +124,8 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 // @ts-ignore
 import * as random from "maath/random/dist/maath-random.esm";
+import DebugPoint from "./Comet";
+import Comet from "./Comet";
 
 /* =======================
    Star Background
@@ -132,7 +134,7 @@ const StarBackground = (props: any) => {
   const ref = useRef<any>();
 
   const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5001), { radius: 1.2 })
+    random.inSphere(new Float32Array(6000), { radius: 1.2 })
   );
 
   useFrame((state, delta) => {
@@ -168,7 +170,7 @@ const StarBackground = (props: any) => {
 ======================= */
 const StarsCanvas = () => {
   return (
-   <div className="fixed inset-0 z-108 glass-background">
+   <div className="fixed inset-0 z-0 glass-background">
   <Canvas
     camera={{ position: [0, 0, 1] }}
     dpr={[1, 2]}
@@ -176,6 +178,7 @@ const StarsCanvas = () => {
   >
     <Suspense fallback={null}>
       <StarBackground />
+      <Comet/>
     </Suspense>
   </Canvas>
 </div>

@@ -39,21 +39,49 @@ body {
 }
 
 
-@keyframes spinY {
+/* @keyframes spinY {
   0% {
     transform: rotateY(0deg);
   }
   100% {
     transform: rotateY(360deg);
   }
+} */
+
+/* .spin-y {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+
+  transform: rotateY(0deg);
+  transition: transform 0.4s ease-out;
+} */
+
+/* .spin-y:hover {
+  animation: spinY 3s linear infinite;
+} */
+
+/* force reset when hover ends */
+/* .spin-y:not(:hover) {
+  animation: none;
+  transform: rotateY(0deg);
+  transition: transform 0.4s ease;
+} */
+ 
+@keyframes spinY {
+  0% {
+    transform: rotateY(0deg) translateZ(0);
+  }
+  50% {
+    transform: rotateY(180deg) translateZ(20px);
+  }
+  100% {
+    transform: rotateY(360deg) translateZ(0);
+  }
 }
 
 .spin-y {
   transform-style: preserve-3d;
-  backface-visibility: hidden;
-
-  /* base state */
-  transform: rotateY(0deg);
+  backface-visibility: visible;
   transition: transform 0.4s ease-out;
 }
 
@@ -61,12 +89,7 @@ body {
   animation: spinY 3s linear infinite;
 }
 
-/* force reset when hover ends */
-.spin-y:not(:hover) {
-  animation: none;
-  transform: rotateY(0deg);
-  transition: transform 0.4s ease;
-}
+/* keyframes */
 
 
 .Welcome-text {
@@ -76,6 +99,7 @@ body {
             rgba(255, 255, 255, 0.4)
         ),
         linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%) !important;
+    box-shadow:  0px 0px 11px #a48fff1f !important;    
     background-blend-mode: normal, screen !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
@@ -150,5 +174,5 @@ html {
 }
 
 .glass-background{
-  
+  background-color: rgba(3, 0, 21, 0.5) !important;
 }

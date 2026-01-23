@@ -85,10 +85,10 @@ const AboutMe = () => {
 
     <section
             id="about"
-            className="flex flex-col md:flex-row relative items-center justify-center min-h-screen w-full h-full z-[110] glass-background"
+            className=" flex flex-col md:flex-row relative items-center justify-center min-h-screen w-full h-full z-[110] "
         >
             <StarsCanvas></StarsCanvas>
-            <div className="md:absolute w-auto h-auto md:top-[80px] z-[50]">
+            <div className="md:absolute w-auto h-auto md:top-[0px] z-[50]">
                 <InView triggerOnce={false}>
                     {({ inView, ref }) => (
                         
@@ -131,7 +131,7 @@ const AboutMe = () => {
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
                             variants={slideInFromRight(0.5)}
-                            className="flex flex-col items-center w-auto h-auto rounded-full overflow-hidden border-[6px] border-[#7042f88b] bg-gradient-to-r from-purple-500 to-cyan-500  hover:shadow-[0_0_30px_10px_rgba(99,102,241,0.8)] z-[999] cursor-pointer"
+                            className="flex flex-col items-center w-auto h-auto rounded-full overflow-hidden border-[6px] border-[#7042f88b] bg-gradient-to-r from-purple-500 to-cyan-500  hover:shadow-[0_0_30px_10px_rgba(99,102,241,0.8)] z-999 cursor-pointer"
                         >
                             <img src="/logo2.png" alt="profile" width={250} className="z-[110]"/>
                         </motion.div>
@@ -161,7 +161,7 @@ const AboutMe = () => {
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
                             variants={slideInFromRight(0.5)}
-                            className="Welcome-box px-[15px] w-[90%] md:w-3/4 py-[8px] z-[20] brder mb-[20px] border-[#7042f88b] opacity-[0.9]"
+                            className="Welcome-box px-[15px] border w-[90%] md:w-3/4 py-[8px] z-[20] brder mb-[20px] border-[#7042f88b] opacity-[0.9]"
                         >
                             <h1 className="Welcome-text text-[16px] w-full text-justify">
                                 As a passionate Full Stack Developer with
@@ -188,7 +188,7 @@ const AboutMe = () => {
                 </div>
             </div> */}
 
-            <div className="w-full hidden lg:flex items-start justify-center absolute top-[-135px] z-0">
+            <div className="  w-full hidden lg:flex items-start justify-center absolute top-[-135px] z-0">
                 <video
                     loop
                     muted
