@@ -34,7 +34,9 @@ const Ball: FC<BallProps> = ({ imgUrl }) => {
         <icosahedronGeometry args={[1, 1]} />
 
         <meshStandardMaterial
-          color="#fff8eb"
+          color="#C7B9FF"
+  emissive="#C7B9FF"
+  emissiveIntensity={0.6}
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading

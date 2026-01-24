@@ -188,7 +188,7 @@ const AboutMe = () => {
                 </div>
             </div> */}
 
-            <div className="  w-full hidden lg:flex items-start justify-center absolute top-[-135px] z-0">
+            <div className="  w-full hidden lg:flex items-start justify-center absolute top-[-135px] z-[-10]">
                 <video
                     loop
                     muted

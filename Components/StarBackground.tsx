@@ -126,6 +126,7 @@ import { Points, PointMaterial } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 import DebugPoint from "./Comet";
 import Comet from "./Comet";
+import ShootingStars from "./ShootingStars";
 
 /* =======================
    Star Background
@@ -178,7 +179,7 @@ const StarsCanvas = () => {
   >
     <Suspense fallback={null}>
       <StarBackground />
-      <Comet/>
+      <ShootingStars/>
     </Suspense>
   </Canvas>
 </div>
