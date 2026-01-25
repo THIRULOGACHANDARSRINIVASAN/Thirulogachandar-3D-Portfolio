@@ -1,4 +1,79 @@
-import React, { Suspense, FC } from "react";
+// import React, { Suspense, FC } from "react";
+// import { Canvas } from "@react-three/fiber";
+// import {
+//   Decal,
+//   Float,
+//   OrbitControls,
+//   Preload,
+//   useTexture,
+// } from "@react-three/drei";
+
+// import CanvasLoader from "./Loader";
+
+// /* ---------- Types ---------- */
+
+// interface BallProps {
+//   imgUrl: string;
+// }
+
+// interface BallCanvasProps {
+//   icon: string;
+// }
+
+// /* ---------- Components ---------- */
+
+// const Ball: FC<BallProps> = ({ imgUrl }) => {
+//   const [decal] = useTexture([imgUrl]) as [THREE.Texture];
+
+//   return (
+//     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+//       <ambientLight intensity={0.25} />
+//       <directionalLight position={[0, 0, 0.05]} />
+
+//       <mesh castShadow receiveShadow scale={2.75}>
+//         <icosahedronGeometry args={[1, 1]} />
+
+//         <meshStandardMaterial
+//           color="#C7B9FF"
+//   emissive="#C7B9FF"
+//   emissiveIntensity={0.6}
+//           polygonOffset
+//           polygonOffsetFactor={-5}
+//           flatShading
+//         />
+
+//         <Decal
+//           position={[0, 0, 1]}
+//           rotation={[2 * Math.PI, 0, 6.25]}
+//           scale={1}
+//           map={decal}
+//           flatShading
+//         />
+//       </mesh>
+//     </Float>
+//   );
+// };
+
+// const BallCanvas: FC<BallCanvasProps> = ({ icon }) => {
+//   return (
+//     <Canvas
+//       frameloop="demand"
+//       dpr={[1, 2]}
+//       gl={{ preserveDrawingBuffer: true }}
+//     >
+//       <Suspense fallback={<CanvasLoader />}>
+//         <OrbitControls enableZoom={false} />
+//         <Ball imgUrl={icon} />
+//       </Suspense>
+
+//       <Preload all />
+//     </Canvas>
+//   );
+// };
+
+// export default BallCanvas;
+
+import React, { FC, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -7,6 +82,7 @@ import {
   Preload,
   useTexture,
 } from "@react-three/drei";
+import * as THREE from "three";
 
 import CanvasLoader from "./Loader";
 
@@ -20,28 +96,31 @@ interface BallCanvasProps {
   icon: string;
 }
 
-/* ---------- Components ---------- */
+/* ---------- Ball ---------- */
 
 const Ball: FC<BallProps> = ({ imgUrl }) => {
   const [decal] = useTexture([imgUrl]) as [THREE.Texture];
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+      {/* Lights */}
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
 
+      {/* Sphere */}
       <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
 
         <meshStandardMaterial
           color="#C7B9FF"
-  emissive="#C7B9FF"
-  emissiveIntensity={0.6}
+          emissive="#C7B9FF"
+          emissiveIntensity={0.6}
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
         />
 
+        {/* Logo decal */}
         <Decal
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
@@ -54,6 +133,8 @@ const Ball: FC<BallProps> = ({ imgUrl }) => {
   );
 };
 
+/* ---------- Canvas ---------- */
+
 const BallCanvas: FC<BallCanvasProps> = ({ icon }) => {
   return (
     <Canvas
@@ -61,8 +142,11 @@ const BallCanvas: FC<BallCanvasProps> = ({ icon }) => {
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >
+      {/* Controls must NOT be inside Suspense */}
+      <OrbitControls enableZoom={false} />
+
+      {/* Only async components inside Suspense */}
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
 
