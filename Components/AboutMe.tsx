@@ -85,7 +85,7 @@ const AboutMe = () => {
 
     <section
             id="about"
-            className=" flex flex-col md:flex-row relative items-center justify-center min-h-screen w-full h-full z-[110] "
+            className="glass-background flex flex-col md:flex-row relative items-center justify-center min-h-screen w-full h-full z-[110] "
         >
             <StarsCanvas></StarsCanvas>
             <div className="md:absolute w-auto h-auto md:top-[0px] z-[50]">

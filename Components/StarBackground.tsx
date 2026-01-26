@@ -171,7 +171,7 @@ const StarBackground = (props: any) => {
 ======================= */
 const StarsCanvas = () => {
   return (
-   <div className="fixed inset-0 z-0 glass-background">
+   <div className="fixed inset-0 z-[0]  glass-background">
   <Canvas
     camera={{ position: [0, 0, 1] }}
     dpr={[1, 2]}

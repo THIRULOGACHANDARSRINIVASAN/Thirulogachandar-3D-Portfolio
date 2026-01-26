@@ -437,7 +437,7 @@ const PositionAnimation: React.FC<HeroPositionProps> = ({ onComplete }) => {
         <motion.span
           key={index}
           variants={letter}
-          className="inline-block text-[1rem] md:text-[1.8rem]"
+          className="inline-block text-[1rem] md:text-[1.8rem] cinzel-font"
           onAnimationComplete={() => {
             // ✅ call ONLY when last letter finishes
             if (index === text.length - 1 && inView) {
