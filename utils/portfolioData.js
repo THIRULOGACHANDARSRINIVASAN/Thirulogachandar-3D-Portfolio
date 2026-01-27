@@ -27,7 +27,7 @@ export const tools = [
   { id: 3, name: "Git", image: "/tool-logos/git-original.svg" },
 ];
 
-export const Backend = [
+export const backend = [
   { id: 1, name: "Node.js", image: "/backend-logos/nodejs-original.svg" },
   { id: 2, name: "Express.Js", image: "/backend-logos/express-original.svg" },
   { id: 3, name: "Mongo DB", image: "/backend-logos/mongodb-original.svg" },

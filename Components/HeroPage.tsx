@@ -4,13 +4,14 @@ import PositionAnimation from "./PositionAnimation";
 import HeroLogo from "./HeroLogo";
 import DownloadButton from "./DownloadButton";
 import { InView } from "react-intersection-observer";
-
+import StarsCanvas from "./StarBackground";
 const HeroPage = () => {
   const [showPosition, setShowPosition] = useState(false);
   const [showLogo,setShowLogo] = useState(false)
 
   return (
-    <div className=" flex flex-col h-[100vh]   bg-[#030015] z-999">
+    <div className=" flex flex-col h-[100vh]   bg-transparent z-999">
+      {/* <StarsCanvas/> */}
       <div className=" w-full h-full flex flex-col  justify-center items-center xl:w-1/2 ">
         <HeroLogo></HeroLogo>
         <NameAnimation onComplete={() => setShowPosition(true)}></NameAnimation>

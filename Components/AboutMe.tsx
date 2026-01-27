@@ -85,7 +85,7 @@ const AboutMe = () => {
 
     <section
             id="about"
-            className="glass-background flex flex-col md:flex-row relative items-center justify-center min-h-screen w-full h-full z-[110] "
+            className=" flex flex-col md:flex-row relative items-center justify-center min-h-screen w-full h-full z-[110] "
         >
             <StarsCanvas></StarsCanvas>
             <div className="md:absolute w-auto h-auto md:top-[0px] z-[50]">
@@ -110,20 +110,6 @@ const AboutMe = () => {
             </div>
 
             <div className="flex flex-col items-center justify-start relative md:mt-[90px] lg:mt-12 z-[20] w-auto h-auto ">
-                {/* <InView triggerOnce={false}>
-                    {({ inView, ref }) => (
-                        <motion.div
-                            ref={ref}
-                            initial="hidden"
-                            animate={inView ? "visible" : "hidden"}
-                            variants={slideInFromLeft(0.3)}
-                            className="flex flex-col items-center w-auto h-auto rounded-full overflow-hidden border-[6px] border-[#7042f88b] bg-gradient-to-r from-purple-500 to-cyan-500 transition-all duration-300 hover:shadow-[0_0_30px_10px_rgba(99,102,241,0.8)]"
-                        >
-                            <img src="/logo2.png" alt="profile" width={250} />
-                        </motion.div>
-                    )}
-                </InView> */}
-
                 <InView triggerOnce={false}>
                     {({ inView, ref }) => (
                         <motion.div
@@ -182,13 +168,13 @@ const AboutMe = () => {
                     )}
                 </InView>
             </div>
-            {/* <div className="absolute z-[20] bottom-[-4rem] md:bottom-[10px] px-[5px]">
+            <div className="absolute z-[20] bottom-[-4rem] md:bottom-[10px] px-[5px]">
                 <div className="cursive text-[20px] font-medium text-center text-gray-300">
                     Shaping Tomorrow with Code and Creativity
                 </div>
-            </div> */}
+            </div>
 
-            <div className="  w-full hidden lg:flex items-start justify-center absolute top-[-135px] z-[-10]">
+            <div className="  w-full hidden lg:flex items-start justify-center absolute top-[-135px] -z-10">
                 <video
                     loop
                     muted

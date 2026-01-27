@@ -29,12 +29,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${cinzel.variable}`}  
-      > 
+      <body className={`relative ${cinzel.variable}
+    ${inter.variable} bg-black`}>
         <StarsCanvas />
         <Navbar></Navbar>
-        {children}
+        <main className="relative z-10">
+          {children}
+        </main>
+
       </body>
     </html>
   );
