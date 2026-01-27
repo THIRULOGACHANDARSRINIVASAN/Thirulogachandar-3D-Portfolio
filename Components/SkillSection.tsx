@@ -67,7 +67,7 @@ export default function SkillSection  ({ title, data }: { title: string; data: a
                 key={index}
                 className="w-[120px] flex flex-col items-center gap-3 z-200"
               >
-                <div className="w-[100px] h-[100px]">
+                <div className="w-[100px] h-[100px] cursor-grab">
                   {/* <BallCanvas icon={item.image} /> */}
                   <div className=" tilt-card border flex justify-center py-5 bg-blue-50 border-rounded rounded-4xl">
                   <img src={item.image} alt="" width={50} height={50} className="border"/>
@@ -75,7 +75,7 @@ export default function SkillSection  ({ title, data }: { title: string; data: a
                   </div>
                 </div>
 
-                <p className="text-sm text-center text-white Skill-heading px-2 py-1.5 ">
+                <p className="text-sm text-center text-white Skill-heading px-2 py-1.5 cursor-text">
                   {item.name}
                 </p>
               </div>

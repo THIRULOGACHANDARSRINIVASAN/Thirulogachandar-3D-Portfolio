@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`relative ${cinzel.variable}
-    ${inter.variable} bg-black`}>
+    ${inter.variable}  bg-[rgba(3,0,21,0.3)]`}>
         <StarsCanvas />
         <Navbar></Navbar>
         <main className="relative z-10">

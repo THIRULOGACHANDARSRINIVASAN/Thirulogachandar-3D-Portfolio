@@ -10,7 +10,7 @@ import Skills from "@/Components/Skills";
 export default function Home() {
   const [showLogo, setShowLogo] = useState(false);
   return (
-    <div className="relative   glass-background">
+    <div className="relative glass-background bg-[#030014]">
       <HeroPage />
       <AboutMe />
       <Skills></Skills>

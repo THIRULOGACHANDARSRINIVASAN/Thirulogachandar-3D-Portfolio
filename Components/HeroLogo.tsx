@@ -601,7 +601,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { InView } from "react-intersection-observer";
-
+import BallCanvas from "./Balls";
 export default function FallingLogo( ) {
   return (
     <div className="relative py-6 w-full overflow-hidden flex justify-center z-[999] pointer-events-auto">
@@ -617,7 +617,7 @@ export default function FallingLogo( ) {
           damping: 12,
         }}
       >
-        <Image
+        {/* <Image
           src="/logo.png"
           alt="Logo"
           width={200}
@@ -628,7 +628,15 @@ export default function FallingLogo( ) {
             transition-all duration-300
             hover:shadow-[0_0_30px_10px_rgba(99,102,241,0.8)]
           "
-        />
+        /> */}
+        <div  className="
+            rounded-full
+            cursor-pointer
+            transition-all duration-300
+            hover:shadow-[0_0_30px_10px_rgba(99,102,241,0.8)] w-50 h-50
+          ">
+          <BallCanvas icon="/logo.png"></BallCanvas>
+        </div>
       </motion.div>
     )}
   </InView>

@@ -10,7 +10,7 @@ const HeroPage = () => {
   const [showLogo,setShowLogo] = useState(false)
 
   return (
-    <div className=" flex flex-col h-[100vh]   bg-transparent z-999">
+    <div className=" flex flex-col h-[100vh]  glass-background z-100">
       {/* <StarsCanvas/> */}
       <div className=" w-full h-full flex flex-col  justify-center items-center xl:w-1/2 ">
         <HeroLogo></HeroLogo>
