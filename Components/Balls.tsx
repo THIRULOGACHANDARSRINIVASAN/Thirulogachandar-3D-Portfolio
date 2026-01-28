@@ -354,7 +354,7 @@ const Ball: FC<BallProps> = ({ imgUrl }) => {
         <Decal
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
-          scale={1}
+          scale={1.5}
           map={decal}
           flatShading
         />

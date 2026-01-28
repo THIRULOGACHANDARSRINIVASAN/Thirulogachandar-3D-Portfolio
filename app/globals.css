@@ -228,7 +228,7 @@ html {
 /* Hover tilt + glow */
 .tilt-card:hover {
   /* transform: rotateX(10deg) rotateZ(10deg); */
-  animation: zTilt 6s ease-in-out;
+  animation: zTilt 3s ease-in-out;
   box-shadow:
     0 0 25px rgba(59, 130, 246, 0.6),
     0 0 50px rgba(59, 130, 246, 0.35);
