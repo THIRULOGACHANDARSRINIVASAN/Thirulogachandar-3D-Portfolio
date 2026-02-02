@@ -7,6 +7,7 @@ import HeroPage from "@/Components/HeroPage";
 import AboutMe from "@/Components/AboutMe";
 import { useState } from "react";
 import Skills from "@/Components/Skills";
+import { Experience } from "@/Components/Experience";
 export default function Home() {
   const [showLogo, setShowLogo] = useState(false);
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <HeroPage />
       <AboutMe />
       <Skills></Skills>
-      {/* <div className="h-[100vh]"></div> */}
+      <Experience></Experience>
 
       
     </div>

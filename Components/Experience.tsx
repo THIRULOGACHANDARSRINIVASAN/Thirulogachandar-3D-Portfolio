@@ -3,10 +3,9 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-
 import { EXPERIENCES } from "../utils/portfolioData";
 import { SectionWrapper } from "../hoc";
-import { styles } from "../styles";
+import { styles } from "../utils/portfolioData";
 import { textVariant } from "../utils/motion";
 
 import "react-vertical-timeline-component/style.min.css";
