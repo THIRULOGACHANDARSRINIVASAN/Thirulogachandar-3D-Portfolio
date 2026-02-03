@@ -171,11 +171,12 @@ const StarBackground = (props: any) => {
 ======================= */
 const StarsCanvas = () => {
   return (
-   <div className="fixed inset-0 z-10 bg-[rgba(3,0,21,0.3)] glass-background">
+   <div className="fixed inset-0 z-10 bg-[rgba(3,0,21,0.3)] ">
   <Canvas
     camera={{ position: [0, 0, 1] }}
     dpr={[1, 2]}
     style={{ pointerEvents: "none" }}
+    className="w-full"
   >
     <Suspense fallback={null}>
       <StarBackground />

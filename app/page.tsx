@@ -8,16 +8,21 @@ import AboutMe from "@/Components/AboutMe";
 import { useState } from "react";
 import Skills from "@/Components/Skills";
 import { Experience } from "@/Components/Experience";
-export default function Home() {
-  const [showLogo, setShowLogo] = useState(false);
-  return (
-    <div className="relative glass-background bg-[#030014]">
-      <HeroPage />
-      <AboutMe />
-      <Skills></Skills>
-      <Experience></Experience>
+import SpaceLoader from "@/Components/InitialLoader";
 
-      
+
+export default function Home() {
+  const [showContent, setShowContent] = useState(true);
+  return (
+    <div className=" glass-background  bg-[#030014] main-container sm:w-full">
+      {showContent ? (<SpaceLoader show={showContent} setShow={setShowContent}></SpaceLoader>) : (<>
+        <HeroPage />
+        <AboutMe />
+        <Skills></Skills>
+        <Experience></Experience>
+
+      </>)}
+
     </div>
   );
 }

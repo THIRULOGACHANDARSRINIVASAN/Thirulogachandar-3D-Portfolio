@@ -10,15 +10,14 @@ const HeroPage = () => {
   const [showLogo,setShowLogo] = useState(false)
 
   return (
-    <div className=" flex flex-col h-[100vh]  glass-background z-100">
+    <div className=" flex flex-col h-[100vh]   z-100 ">
       {/* <StarsCanvas/> */}
       <div className=" w-full h-full flex flex-col  justify-center items-center xl:w-1/2 ">
         <HeroLogo></HeroLogo>
         <NameAnimation onComplete={() => setShowPosition(true)}></NameAnimation>
-        <PositionAnimation show={showPosition} onComplete={() => setShowLogo(true)}></PositionAnimation>
+        <PositionAnimation  onComplete={() => setShowLogo(true)}></PositionAnimation>
         <div className=" w-full flex justify-evenly h-[10%] items-center z-[120]  ">
-          {/* <button className="border px-5 py-0 rounded-xl h-[50%] cursor-pointer" onClick={()=>{console.log("DFghjk")}}>donen</button> */}
-          <DownloadButton show={showLogo}></DownloadButton>
+          <DownloadButton ></DownloadButton>
         </div>
       </div>
     </div>

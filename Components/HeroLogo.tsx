@@ -635,7 +635,7 @@ export default function FallingLogo( ) {
             transition-all duration-300
             hover:shadow-[0_0_30px_10px_rgba(99,102,241,0.8)] w-50 h-50
           ">
-          <BallCanvas icon="/logo.png"></BallCanvas>
+          <BallCanvas icon="/logo.svg"></BallCanvas>
         </div>
       </motion.div>
     )}
