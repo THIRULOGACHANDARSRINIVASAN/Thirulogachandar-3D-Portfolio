@@ -3,6 +3,7 @@ import "./globals.css";
 import StarsCanvas from '../Components/StarBackground'
 import Navbar from "@/Components/Navbar";
 import { Cinzel, Inter } from "next/font/google";
+import GalaxyCursor from "@/Components/GalaxyCursor";
 
 export const cinzel = Cinzel({
   subsets: ["latin"],
@@ -35,7 +36,8 @@ export default function RootLayout({
       <body className={`relative ${cinzel.variable}
     ${inter.variable}  bg-[rgba(3,0,21,0.3)] `}>
         <StarsCanvas />
-        <Navbar></Navbar>
+        <Navbar/>
+        <GalaxyCursor/>
         <main className=" z-100">
           {children}
         </main>

@@ -664,7 +664,7 @@ const NameAnimation: React.FC<HeroNameProps> = ({ onComplete }) => {
           <motion.span
             key={index}
             variants={letter}
-            className="inline-block text-[1.8rem] md:text-[3rem] xl:text-[3.5rem] hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400 font-semibold cursor-pointer z-5"
+            className="inline-block text-[1.8rem] md:text-[3rem] xl:text-[3.5rem] hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400 font-semibold . z-5"
             onAnimationComplete={() => {
               if (index === name.length - 1 && inView) {
                 onComplete?.();

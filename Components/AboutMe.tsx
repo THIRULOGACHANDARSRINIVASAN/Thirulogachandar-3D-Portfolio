@@ -117,9 +117,9 @@ const AboutMe = () => {
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
                             variants={slideInFromRight(0.5)}
-                            className="flex flex-col items-center w-auto h-auto rounded-full overflow-hidden border-[6px] border-[#7042f88b] bg-gradient-to-r from-purple-500 to-cyan-500  hover:shadow-[0_0_30px_10px_rgba(99,102,241,0.8)] z-999 cursor-pointer"
+                            className="flex flex-col items-center w-auto h-auto rounded-full overflow-hidden border-[6px] border-[#7042f88b] bg-gradient-to-r from-purple-500 to-cyan-500  hover:shadow-[0_0_30px_10px_rgba(99,102,241,0.8)] z-999 ."
                         >
-                            <img src="/logo2.png" alt="profile" width={250} className="z-[110]" />
+                            <img src="/logo2.png" alt="profile" width={250} className="z-[10]" />
                         </motion.div>
                     )}
                 </InView>
@@ -165,7 +165,7 @@ const AboutMe = () => {
                 </div>
             </div>
 
-            <div className="  w-full hidden lg:flex items-start justify-center absolute -top-33.75 -z-10 lg:-top-11 xl:-top-12.5">
+            <div className="  w-full hidden lg:flex items-start justify-center absolute -top-33.75 -z-10 lg:-top-30 xl:-top-29.5 2xl:-top-18.5 right-2.5">
                 <video
                     loop
                     muted

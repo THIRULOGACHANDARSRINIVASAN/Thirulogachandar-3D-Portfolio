@@ -7,7 +7,7 @@
 //   return (
 //     <motion.button
 //       whileHover="hover"
-//       className="flex items-center gap-2 px-6 py-3 rounded-lg bg-indigo-600 text-white cursor-pointer overflow-hidden"
+//       className="flex items-center gap-2 px-6 py-3 rounded-lg bg-indigo-600 text-white . overflow-hidden"
 //     >
 //       <motion.span
 //         variants={{
@@ -83,7 +83,7 @@
 //         },
 //       }}
 //       transition={{ type: "spring", stiffness: 300, damping: 15 }}
-//       className="relative cursor-pointer overflow-hidden rounded-xl px-6 py-3 bg-black text-white flex items-center gap-3 border border-white/10"
+//       className="relative . overflow-hidden rounded-xl px-6 py-3 bg-black text-white flex items-center gap-3 border border-white/10"
 //     >
 //       {/* Glow border */}
 //       <motion.span
@@ -153,7 +153,7 @@
 //         opacity: { duration: 0.4 },
 //         scale: { duration: 0.4 },
 //       }}
-//       className="relative cursor-pointer overflow-hidden rounded-xl px-6 py-3 bg-black text-white flex items-center gap-3 border border-white/10"
+//       className="relative . overflow-hidden rounded-xl px-6 py-3 bg-black text-white flex items-center gap-3 border border-white/10"
 //     >
 //       {/* Glow border */}
 //       <motion.span
@@ -246,7 +246,7 @@
 //           transition: { duration: 1 },
 //         });
 //       }}
-//       className="relative cursor-pointer overflow-hidden rounded-xl px-6 py-3  text-white flex items-center gap-3 border border-white/10"
+//       className="relative . overflow-hidden rounded-xl px-6 py-3  text-white flex items-center gap-3 border border-white/10"
 //     >
 //       {/* Glow border */}
 //       <motion.span
@@ -312,7 +312,7 @@
 //           boxShadow: "0px 5px 40px rgba(73, 13, 191, 0.8)",
 //         },
 //       }}
-//       className="relative cursor-pointer overflow-hidden rounded-xl px-6 py-3 bg-black text-white flex items-center gap-3 border border-white/10"
+//       className="relative . overflow-hidden rounded-xl px-6 py-3 bg-black text-white flex items-center gap-3 border border-white/10"
 //     >
 //       {/* Glow border */}
 //       <motion.span
@@ -388,7 +388,7 @@
 //           },
 //         },
 //       }}
-//       className="relative cursor-pointer overflow-hidden rounded-xl px-6 py-3 bg-black text-white flex items-center gap-3 border border-white/10"
+//       className="relative . overflow-hidden rounded-xl px-6 py-3 bg-black text-white flex items-center gap-3 border border-white/10"
 //     >
 //       {/* Glow border */}
 //       <motion.span
@@ -496,7 +496,7 @@
 //           transition: { duration: 0.5 },
 //         });
 //       }}
-//       className="relative cursor-pointer overflow-hidden rounded-xl px-6 py-3 text-white flex items-center gap-3 border border-white/10"
+//       className="relative . overflow-hidden rounded-xl px-6 py-3 text-white flex items-center gap-3 border border-white/10"
 //     >
 //       {/* Glow border */}
 //       <motion.span
@@ -609,7 +609,7 @@ export default function DownloadButton() {
           transition: { duration: 0.6 },
         });
       }}
-      className="relative flex cursor-pointer items-center gap-3 overflow-hidden rounded-xl border z-[101] border border-white/10 px-6 py-3 text-white "
+      className="relative flex . items-center gap-3 overflow-hidden rounded-xl border z-[101] border border-white/10 px-6 py-3 text-white "
     >
       {/* Glow border */}
       <motion.span

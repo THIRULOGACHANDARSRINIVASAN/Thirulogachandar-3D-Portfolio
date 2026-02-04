@@ -12,7 +12,7 @@
 
 // const Skills = () => {
 //   return (
-//     <div className="glass-background z-0 flex flex-col bg-transparent border cursor-pointer ">
+//     <div className="glass-background z-0 flex flex-col bg-transparent border . ">
       
 //       {/* <h1 className="border">Backend Technologoies</h1> */}
 //       <div className=" w-auto h-auto  ">
