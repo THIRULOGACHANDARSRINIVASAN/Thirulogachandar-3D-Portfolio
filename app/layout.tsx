@@ -37,7 +37,7 @@ export default function RootLayout({
     ${inter.variable}  bg-[rgba(3,0,21,0.3)] `}>
         <StarsCanvas />
         <Navbar/>
-        <GalaxyCursor/>
+        {/* <GalaxyCursor/> */}
         <main className=" z-100">
           {children}
         </main>

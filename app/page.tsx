@@ -18,7 +18,7 @@ export default function Home() {
       {showContent ? (<SpaceLoader show={showContent} setShow={setShowContent}></SpaceLoader>) : (<>
         <HeroPage />
         <AboutMe />
-        <Skills></Skills>
+        <Skills/>
         <Experience></Experience>
 
       </>)}

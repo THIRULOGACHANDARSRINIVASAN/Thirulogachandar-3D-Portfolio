@@ -84,7 +84,7 @@ const AboutMe = () => {
         // </div>
 
         <section
-            id="about"
+            id="aboutme"
             className=" flex flex-col md:flex-row relative items-center justify-center min-h-screen w-full h-full z-[110] "
         >
             <StarsCanvas></StarsCanvas>

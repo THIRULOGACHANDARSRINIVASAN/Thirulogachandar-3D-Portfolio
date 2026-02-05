@@ -10,9 +10,9 @@ const HeroPage = () => {
   const [showLogo,setShowLogo] = useState(false)
 
   return (
-    <div className=" flex flex-col h-[100vh]   z-100 ">
+    <div className=" flex flex-col h-[100vh]  justify-center z-100 ">
       {/* <StarsCanvas/> */}
-      <div className=" w-full h-full flex flex-col  justify-center items-center  ">
+      <div className=" w-full h-1/1.5 flex flex-col justify-start  items-center md:justify-center pt-20  md:h-full">
         <HeroLogo></HeroLogo>
         <NameAnimation onComplete={() => setShowPosition(true)}></NameAnimation>
         <PositionAnimation  onComplete={() => setShowLogo(true)}></PositionAnimation>

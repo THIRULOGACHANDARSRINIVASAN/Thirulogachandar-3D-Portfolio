@@ -1,0 +1,194 @@
+now clearly ask my requirement in my 3d portfolio i want to build custom toast message using animations how im expecting is if the toast is trigerred it should comes like a rocket starting from right corner at the end of the rocket there is the long cloth attached  in that long cloth the toast message should displaying and the rocket moving from the right top corner to left top corner till the duration ends
+
+Ooo okay 😄 this is a very cool 3D-portfolio-worthy idea, not a normal toast at all. I’m glad you clarified the visual expectation — now it’s crystal clear 🚀🧣
+
+Let me restate your requirement first (to be 100% aligned), then I’ll show how to build it cleanly.
+
+✅ Your exact requirement (in plain words)
+
+When a toast is triggered:
+
+🚀 A rocket appears from the top-right corner
+
+🧣 A long cloth / banner is attached to the rocket tail
+
+📜 The toast message is displayed on that cloth
+
+The rocket moves from right-top → left-top
+
+The movement lasts exactly for the toast duration
+
+When duration ends → rocket + cloth disappear
+
+This is basically a custom animated notification, not a library toast.
+
+🧠 Best tech stack for THIS animation
+
+Since this is a 3D portfolio, the cleanest combo is:
+
+✅ Recommended
+
+React + Tailwind (layout & positioning)
+
+Framer Motion (movement + timing)
+
+SVG or PNG rocket
+
+CSS / SVG for cloth waving
+
+⚠️ Avoid:
+
+react-toastify (too limited)
+
+pure CSS only (painful timing control)
+
+🏗️ Architecture (important)
+
+Instead of “toast”, think:
+
+🎯 AnimatedOverlayNotification
+
+Component structure
+RocketToast
+ ├── Rocket (image / svg)
+ ├── ClothBanner
+ │    └── ToastMessage
+
+📐 Positioning logic
+
+Use position: fixed
+
+Start position:
+
+top: -40px
+
+right: -100px
+
+End position:
+
+top: 20px
+
+left: -100% (rocket exits screen)
+
+🎬 Animation concept (Framer Motion)
+Rocket movement
+
+Animate x from +100vw → -120vw
+
+Animate y slightly (small wave)
+
+Duration = toast duration
+
+Cloth animation
+
+Cloth stays attached
+
+Add:
+
+slight wave / sway
+
+delayed follow to feel “dragged”
+
+🧩 Core implementation (simplified but real)
+1️⃣ RocketToast component
+import { motion } from "framer-motion";
+
+export default function RocketToast({ message, duration = 5000 }) {
+  return (
+    <motion.div
+      className="fixed top-6 right-0 z-50 flex items-center"
+      initial={{ x: "100vw", y: -20 }}
+      animate={{ x: "-120vw" }}
+      transition={{
+        duration: duration / 1000,
+        ease: "linear",
+      }}
+    >
+      {/* Rocket */}
+      <img
+        src="/rocket.png"
+        className="w-16 h-16 rotate-[-15deg]"
+        alt="rocket"
+      />
+
+      {/* Cloth */}
+      <motion.div
+        className="ml-2 px-6 py-3 bg-black/80 text-white rounded-r-full shadow-lg whitespace-nowrap"
+        animate={{
+          y: [0, -3, 3, -2, 2, 0],
+        }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        {message}
+      </motion.div>
+    </motion.div>
+  );
+}
+
+2️⃣ Triggering the toast
+
+Create a simple toast controller:
+
+const [show, setShow] = useState(false);
+
+const triggerToast = () => {
+  setShow(true);
+  setTimeout(() => setShow(false), 5000);
+};
+
+{show && (
+  <RocketToast message="Welcome to my 3D Portfolio 🚀" duration={5000} />
+)}
+
+🎨 Make it feel PREMIUM (important tips)
+🔥 Rocket realism
+
+Slight rotation (rotate(-15deg))
+
+Tiny flame animation using CSS or SVG
+
+🧣 Cloth realism
+
+Rounded only on right
+
+Add gradient:
+
+background: linear-gradient(to right, #111, #333);
+
+🌀 Extra polish
+
+Smoke particles behind rocket
+
+Sound effect on trigger (optional)
+
+Different messages → different cloth colors
+
+🧠 Why this approach is perfect for a portfolio
+
+✔ Not generic
+✔ Shows animation knowledge
+✔ Shows UX creativity
+✔ Recruiters remember this
+✔ Easily expandable to 3D later (Three.js)
+
+🚀 Next level (if you want)
+
+Tell me:
+
+Are you already using Three.js / React Three Fiber?
+
+Is your portfolio fullscreen canvas or normal React DOM?
+
+I can:
+
+Convert this to Three.js
+
+Add cloth physics
+
+Sync with page interactions (hover, click, load)
+
+This idea is 🔥 — you’re thinking like a creative frontend dev, not just a coder.
