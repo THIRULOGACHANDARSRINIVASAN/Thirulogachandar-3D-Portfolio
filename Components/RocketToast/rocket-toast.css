@@ -1,0 +1,24 @@
+.rocket-toast-wrapper {
+  position: fixed;
+  top: 16px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.rocket-image {
+  transform: rotate(-15deg);
+}
+
+.cloth-banner {
+  margin-left: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(to right, #111, #333);
+  color: white;
+  font-weight: 500;
+  border-radius: 0 999px 999px 0;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}

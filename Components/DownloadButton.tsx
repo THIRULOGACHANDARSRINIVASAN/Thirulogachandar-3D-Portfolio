@@ -528,9 +528,11 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Download } from "lucide-react";
+import { useRocketToast } from "@/hooks/useRocketToast";
 
 export default function DownloadButton() {
   const ref = useRef<HTMLButtonElement | null>(null);
+  const {showToast} = useRocketToast()
 
   // 👀 Viewport detection
   const isInView = useInView(ref, {
@@ -610,6 +612,7 @@ export default function DownloadButton() {
         });
       }}
       className="relative flex . items-center gap-3 overflow-hidden rounded-xl border z-[101] border border-white/10 px-6 py-3 text-white "
+      onClick={() =>showToast("Rocket toast launched 🚀", 5000)}
     >
       {/* Glow border */}
       <motion.span
@@ -618,7 +621,7 @@ export default function DownloadButton() {
       />
 
       {/* Text */}
-      <span className="relative  font-medium ">
+      <span className="relative  font-medium " >
         Download Resume
       </span>
 

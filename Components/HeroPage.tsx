@@ -5,9 +5,11 @@ import HeroLogo from "./HeroLogo";
 import DownloadButton from "./DownloadButton";
 import { InView } from "react-intersection-observer";
 import StarsCanvas from "./StarBackground";
+import { useRocketToast } from "../hooks/useRocketToast";
 const HeroPage = () => {
   const [showPosition, setShowPosition] = useState(false);
   const [showLogo,setShowLogo] = useState(false)
+  const {showToast} = useRocketToast()
 
   return (
     <div className=" flex flex-col h-[100vh]  justify-center z-100 ">
