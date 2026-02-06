@@ -1,4 +1,4 @@
-.rocket-toast-wrapper {
+/* .rocket-toast-wrapper {
   position: fixed;
   top: 16px;
   right: 0;
@@ -6,19 +6,103 @@
   align-items: center;
   z-index: 9999;
   pointer-events: none;
+} */
+/* .rocket-toast-wrapper {
+  position: fixed;
+  top: 16px;
+  left: 0; 
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  pointer-events: none;
+} */
+
+
+
+.rocket-toast-wrapper {
+  position: fixed;
+  top: 90px;
+  right: 16px;   /* ✅ RIGHT corner */
+  display: flex;
+  align-items: center;
+  z-index:0;
+  pointer-events: none;
 }
 
+
 .rocket-image {
-  transform: rotate(-15deg);
+  transform: rotate(-90deg);
 }
 
 .cloth-banner {
   margin-left: 8px;
   padding: 12px 28px;
-  background: linear-gradient(to right, #111, #333);
+  /* background: linear-gradient(to right, #111, #333); */
+  background: transparent;
   color: white;
   font-weight: 500;
   border-radius: 0 999px 999px 0;
   white-space: nowrap;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+
+
+
+
+
+/* 🔥 Fire container */
+.rocket-fire {
+  position: absolute;
+  right: -25%; /* attach to back of rocket */
+  width: 26px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+/* 🔥 Actual flame */
+.rocket-fire-inner {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    #fff6a5 0%,
+    #ffb703 30%,
+    #fb8500 55%,
+    #d00000 75%,
+    transparent 80%
+  );
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: fireFlicker 0.15s infinite alternate,
+             firePulse 0.6s infinite ease-in-out;
+}
+
+/* 🔥 Flicker */
+@keyframes fireFlicker {
+  from {
+    transform: scaleX(1) scaleY(1);
+    opacity: 0.9;
+  }
+  to {
+    transform: scaleX(1.4) scaleY(1.2);
+    opacity: 1;
+  }
+}
+
+/* ✨ Glow pulse */
+@keyframes firePulse {
+  0% {
+    box-shadow:
+      0 0 6px rgba(255, 183, 3, 0.6),
+      0 0 12px rgba(251, 133, 0, 0.5);
+  }
+  100% {
+    box-shadow:
+      0 0 10px rgba(255, 183, 3, 0.9),
+      0 0 20px rgba(251, 133, 0, 0.8);
+  }
 }

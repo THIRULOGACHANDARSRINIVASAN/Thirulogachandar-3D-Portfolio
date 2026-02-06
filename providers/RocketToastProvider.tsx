@@ -124,7 +124,7 @@ export function RocketToastProvider({
     duration: number;
   } | null>(null);
 
-  const showToast = (message: string, duration = 5000) => {
+  const showToast = (message: string, duration = 200) => {
     setToast({ message, duration });
 
     // clear after duration

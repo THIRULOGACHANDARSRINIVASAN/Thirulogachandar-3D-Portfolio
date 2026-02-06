@@ -12,7 +12,7 @@ const HeroPage = () => {
   const {showToast} = useRocketToast()
 
   return (
-    <div className=" flex flex-col h-[100vh]  justify-center z-100 ">
+    <div className=" flex flex-col h-[100vh]  justify-center z-100 " id="home">
       {/* <StarsCanvas/> */}
       <div className=" w-full h-1/1.5 flex flex-col justify-start  items-center md:justify-center pt-20  md:h-full">
         <HeroLogo></HeroLogo>

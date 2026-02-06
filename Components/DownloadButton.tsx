@@ -243,7 +243,7 @@
 //         iconControls.stop();
 //         iconControls.start({
 //           y: 0,
-//           transition: { duration: 1 },
+//           transition: { : 1 },
 //         });
 //       }}
 //       className="relative . overflow-hidden rounded-xl px-6 py-3  text-white flex items-center gap-3 border border-white/10"
@@ -612,7 +612,7 @@ export default function DownloadButton() {
         });
       }}
       className="relative flex . items-center gap-3 overflow-hidden rounded-xl border z-[101] border border-white/10 px-6 py-3 text-white "
-      onClick={() =>showToast("Rocket toast launched 🚀", 5000)}
+      onClick={() =>showToast("Rocket toast launched 🚀", 2500)}
     >
       {/* Glow border */}
       <motion.span
