@@ -172,7 +172,7 @@ const GalaxyCursor: React.FC = () => {
   }, { scope: container });
 
   return (
-    <div ref={container} className="pointer-events-none fixed inset-0 z-[9999] mix-blend-screen">
+    <div ref={container} className="pointer-events-none fixed inset-0 z-[9] mix-blend-screen">
       
       {/* 1. Main Twinkling Star */}
       <div

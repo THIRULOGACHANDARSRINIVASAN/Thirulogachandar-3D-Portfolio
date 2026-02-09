@@ -382,7 +382,7 @@ const Navbar = () => {
       {/* MOBILE MENU (SMOOTH TRANSITION) */}
       <div
         className={`
-          fixed top-[75px] left-0 w-full md:hidden z-[5000]
+          fixed top-[75px] left-0 w-full md:hidden z-[500]
           transition-all duration-600 ease-in-out
           ${open
             ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"

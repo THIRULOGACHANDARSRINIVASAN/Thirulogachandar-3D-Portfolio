@@ -255,3 +255,11 @@ html {
 
 
 
+.perspective {
+  perspective: 1200px;
+}
+
+
+.project{
+  z-index: 10000 !important;
+}

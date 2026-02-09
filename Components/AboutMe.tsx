@@ -87,7 +87,7 @@ const AboutMe = () => {
             id="aboutme"
             className=" flex flex-col md:flex-row relative items-center justify-center min-h-screen w-full h-full z-[110] "
         >
-            <StarsCanvas></StarsCanvas>
+            {/* <StarsCanvas></StarsCanvas> */}
             <div className="md:absolute w-auto h-auto md:top-[0px] z-[50]">
                 <InView triggerOnce={false}>
                     {({ inView, ref }) => (

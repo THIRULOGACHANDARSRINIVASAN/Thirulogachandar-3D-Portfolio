@@ -217,7 +217,7 @@ const Skills = () => {
     // ❌ no glass-background here
     // ❌ no z-index here
     // ❌ no transform/filter on root
-    <section id="skills" className="relative flex flex-col bg-[#030014]">
+    <section id="skills" className="relative flex flex-col border cursor-pointer">
 
       {/* Page Title */}
       <InView triggerOnce={false}>

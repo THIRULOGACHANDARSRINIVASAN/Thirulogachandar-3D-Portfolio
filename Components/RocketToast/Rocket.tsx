@@ -42,7 +42,7 @@ export default function Rocket({ size = 64 }: RocketProps) {
         alt="Rocket"
         width={size}
         height={size}
-        className="rocket-image relative z-10"
+        className="rocket-image relative z-101"
         priority
       />
       {/* 🔥 Fire Thrust */}

@@ -10,6 +10,7 @@ import Skills from "@/Components/Skills";
 import { Experience } from "@/Components/Experience";
 import SpaceLoader from "@/Components/InitialLoader";
 import { useRocketToast } from "../hooks/useRocketToast";
+import ProjectsRoller from "../Components/ProjectsRoller"
 
 
 export default function Home() {
@@ -20,7 +21,8 @@ export default function Home() {
         <HeroPage />
         <AboutMe />
         <Skills/>
-        <Experience></Experience>
+        {/* <Experience></Experience> */}
+        <ProjectsRoller/>
 
       </>)}
 

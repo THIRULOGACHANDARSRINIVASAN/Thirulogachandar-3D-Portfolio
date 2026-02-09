@@ -75,10 +75,10 @@ const ExperienceCard = ({ experience, elementId }: ExperienceCardProps) => (
 // Experience
 export const Experience = () => {
   return (
-    <SectionWrapper idName="work">
+    <SectionWrapper idName="work" >
       <>
         {/* Title */}
-        <motion.div variants={textVariant()}>
+        <motion.div variants={textVariant()} className="border cursor-pointer">
           <p className={styles.sectionSubText}>My Work So Far</p>
           <h2 className={styles.sectionHeadText}>Work Experience.</h2>
         </motion.div>
