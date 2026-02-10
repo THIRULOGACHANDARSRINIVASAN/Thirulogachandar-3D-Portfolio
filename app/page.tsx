@@ -11,18 +11,26 @@ import { Experience } from "@/Components/Experience";
 import SpaceLoader from "@/Components/InitialLoader";
 import { useRocketToast } from "../hooks/useRocketToast";
 import ProjectsRoller from "../Components/ProjectsRoller"
+import Scene from "@/Components/ProjectScene";
+import CircularCarousel from "@/Components/CircularCarousel";
 
 
 export default function Home() {
   const [showContent, setShowContent] = useState(true);
   return (
-    <div className=" glass-background  bg-[#030014] main-container sm:w-full">
+    <div className=" glass-background  bg-[#030014] main-container sm:w-full ">
       {showContent ? (<SpaceLoader show={showContent} setShow={setShowContent}></SpaceLoader>) : (<>
         <HeroPage />
         <AboutMe />
         <Skills/>
-        {/* <Experience></Experience> */}
-        <ProjectsRoller/>
+        <Experience></Experience>
+        {/* <Scene></Scene> */}
+        {/* <CircularCarousel/> */}
+        {/* <ProjectsRoller/> */}
+        <></>
+        {/* <div className="h-[100vh] border">
+
+        </div> */}
 
       </>)}
 

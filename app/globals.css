@@ -25,9 +25,9 @@
 
 html,
 body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
   /* cursor: url('../public/c21.png') 64 64, auto !important; */
 }
 
@@ -161,6 +161,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    border: none !important;
 }
 
 /* Width */

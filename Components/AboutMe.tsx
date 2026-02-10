@@ -147,7 +147,8 @@ const AboutMe = () => {
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
                             variants={slideInFromRight(0.5)}
-                            className="Welcome-box px-[15px] border w-[90%] md:w-3/4 py-[8px] z-[20] brder mb-[20px] border-[#7042f88b] opacity-[0.9]"
+                            className="Welcome-box px-[15px] 
+                             w-[90%] md:w-3/4 py-[8px] z-[20] brder mb-[20px] border-[#7042f88b] opacity-[0.9]"
                         >
                             <h1 className="Welcome-text text-[16px] w-full text-justify">
                                 MERN Stack Developer with 2 years of experience in building and optimizing scalable web applications using MongoDB,

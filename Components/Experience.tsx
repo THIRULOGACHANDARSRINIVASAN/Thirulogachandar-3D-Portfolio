@@ -78,7 +78,7 @@ export const Experience = () => {
     <SectionWrapper idName="work" >
       <>
         {/* Title */}
-        <motion.div variants={textVariant()} className="border cursor-pointer">
+        <motion.div variants={textVariant()} className=" cursor-pointer">
           <p className={styles.sectionSubText}>My Work So Far</p>
           <h2 className={styles.sectionHeadText}>Work Experience.</h2>
         </motion.div>
