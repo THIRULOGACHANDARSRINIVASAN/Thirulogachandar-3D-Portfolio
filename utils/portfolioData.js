@@ -88,3 +88,119 @@ export const styles = {
     "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider text-white",
 } 
 
+export const projects = [
+  {
+    id: 1,
+    title: "3D Landing Page",
+    description: "A cinematic 3D landing experience",
+    image: "/logo.png",
+  },
+  {
+    id: 2,
+    title: "Metaverse Scene",
+    description: "Interactive 3D metaverse environment",
+    image: "/logo.png",
+  },
+  {
+    id: 3,
+    title: "Product Visualizer",
+    description: "3D product showcase with animations",
+    image: "/logo.png",
+  },
+  {
+    id: 4,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 5,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 6,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 7,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 8,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 9,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 10,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 11,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 12,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 13,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 14,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 15,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 16,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 17,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 18,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+  {
+    id: 19,
+    title: "Game Environment",
+    description: "Realtime game-ready environment",
+    image: "/logo.png",
+  },
+];

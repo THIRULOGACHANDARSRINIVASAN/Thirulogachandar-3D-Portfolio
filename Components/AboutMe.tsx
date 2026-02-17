@@ -166,7 +166,7 @@ const AboutMe = () => {
                 </div>
             </div>
 
-            <div className="  w-full hidden lg:flex items-start justify-center absolute -top-33.75 -z-10 lg:-top-30 xl:-top-29.5 2xl:-top-18.5 right-2.5">
+            {/* <div className="  w-full hidden lg:flex items-start justify-center absolute -top-33.75 -z-10 lg:-top-30 xl:-top-29.5 2xl:-top-18.5 right-2.5">
                 <video
                     loop
                     muted
@@ -176,7 +176,7 @@ const AboutMe = () => {
                     className="h-full z-[-100] "
                     src="/blackhole.webm"
                 />
-            </div>
+            </div> */}
         </section>
     );
 };

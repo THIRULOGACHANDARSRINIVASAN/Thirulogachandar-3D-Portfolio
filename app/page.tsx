@@ -13,6 +13,7 @@ import { useRocketToast } from "../hooks/useRocketToast";
 import ProjectsRoller from "../Components/ProjectsRoller"
 import Scene from "@/Components/ProjectScene";
 import CircularCarousel from "@/Components/CircularCarousel";
+import ProjectsCarousel from "@/Components/Carousel/ProjectsCarousel";
 
 
 export default function Home() {
@@ -31,7 +32,7 @@ export default function Home() {
         {/* <div className="h-[100vh] border">
 
         </div> */}
-
+        <ProjectsCarousel></ProjectsCarousel>
       </>)}
 
     </div>

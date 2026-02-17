@@ -1,0 +1,131 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  perspective: 1400px;
+  overflow: hidden;
+  background-color: #05070a; /* Match your theme */
+}
+
+/* Interaction Layer */
+.swipeLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 50; /* Above the scene, below arrows */
+  background: transparent;
+  touch-action: pan-y;
+  cursor: pointer;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  pointer-events: none; /* Let clicks pass to the swipeLayer */
+}
+
+.card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* Transform is handled via inline styles for dynamic offset */
+  width: 280px;
+  height: 380px;
+  padding: 20px;
+  background: #0f1320;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.title {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.left { left: 30px; }
+.right { right: 30px; }
+
+/* Mobile logic */
+@media (max-width: 768px) {
+  .arrow {
+    display: none; /* Completely remove from layout on mobile */
+  }
+
+  .card {
+    width: 240px;
+    height: 340px;
+  }
+
+  .wrapper {
+    height: 90vh;
+    perspective: 1000px;
+  }
+}
+
+.swipeHint {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  color: #64ffda; /* Accent color */
+  opacity: 0.6;
+  text-transform: uppercase;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+@media (min-width: 769px) {
+  .swipeHint {
+    display: none;
+  }
+}
