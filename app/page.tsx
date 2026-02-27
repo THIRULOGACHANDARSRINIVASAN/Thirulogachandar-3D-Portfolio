@@ -14,6 +14,7 @@ import ProjectsRoller from "../Components/ProjectsRoller"
 import Scene from "@/Components/ProjectScene";
 import CircularCarousel from "@/Components/CircularCarousel";
 import ProjectsCarousel from "@/Components/Carousel/ProjectsCarousel";
+import FeaturedProjects from "@/Components/FeaturedProjects";
 
 
 export default function Home() {
@@ -32,7 +33,8 @@ export default function Home() {
         {/* <div className="h-[100vh] border">
 
         </div> */}
-        <ProjectsCarousel></ProjectsCarousel>
+        {/* <ProjectsCarousel></ProjectsCarousel> */}
+        <FeaturedProjects />
       </>)}
 
     </div>

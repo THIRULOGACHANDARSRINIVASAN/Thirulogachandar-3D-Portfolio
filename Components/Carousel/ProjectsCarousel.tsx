@@ -1087,6 +1087,136 @@
 
 
 
+// "use client";
+
+// import { useState, useRef } from "react";
+// import styles from "./ProjectsCarousel.module.css";
+// import { projects } from "../../utils/portfolioData";
+
+// export default function ProjectsCarousel() {
+//   const total = projects.length;
+//   const [activeIndex, setActiveIndex] = useState(0);
+//   const startX = useRef<number | null>(null);
+
+//   const rotateRight = () => setActiveIndex((i) => (i + 1) % total);
+//   const rotateLeft = () => setActiveIndex((i) => (i - 1 + total) % total);
+
+//   const getOffset = (index: number) => {
+//     let offset = index - activeIndex;
+//     if (offset > total / 2) offset -= total;
+//     if (offset < -total / 2) offset += total;
+//     return offset;
+//   };
+
+//   /* Swipe Logic */
+//   const onTouchStart = (e: React.TouchEvent) => {
+//     startX.current = e.touches[0].clientX;
+//   };
+
+//   const onTouchEnd = (e: React.TouchEvent) => {
+//     if (startX.current === null) return;
+//     const endX = e.changedTouches[0].clientX;
+//     const delta = startX.current - endX;
+
+//     // Threshold of 35px to trigger swipe
+//     if (Math.abs(delta) > 35) {
+//       delta > 0 ? rotateRight() : rotateLeft();
+//     }
+//     startX.current = null;
+//   };
+
+//   /* Desktop Click Logic for the Overlay */
+//   const handleLayerClick = (e: React.MouseEvent) => {
+//     // Only trigger if screen is wide (desktop) 
+//     // and clicking the sides of the container
+//     if (window.innerWidth > 768) {
+//       const { clientX } = e;
+//       const { innerWidth } = window;
+//       if (clientX < innerWidth / 2) {
+//         rotateLeft();
+//       } else {
+//         rotateRight();
+//       }
+//     }
+//   };
+
+//   return (
+//     <section className={styles.wrapper}>
+//       {/* SWIPE & CLICK LAYER 
+//           Acts as the interaction controller 
+//       */}
+//       <div
+//         className={styles.swipeLayer}
+//         onTouchStart={onTouchStart}
+//         onTouchEnd={onTouchEnd}
+//         onClick={handleLayerClick}
+//       />
+
+//       {/* DESKTOP ARROWS - Hidden via CSS on mobile */}
+//       <button
+//         className={`${styles.arrow} ${styles.left}`}
+//         onClick={(e) => { e.stopPropagation(); rotateLeft(); }}
+//         aria-label="Previous Project"
+//       >
+//         ‹
+//       </button>
+
+//       <div className={styles.scene}>
+//         {projects.map((project, index) => {
+//           const offset = getOffset(index);
+//           // Show active, one left, and two right for a balanced 3D feel
+//           if (offset < -1 || offset > 2) return null;
+
+//           let transform = "";
+//           let opacity = 0.4;
+//           let zIndex = 1;
+
+//           if (offset === 0) {
+//             transform = "translate(-50%, -50%) translateZ(260px) scale(1)";
+//             opacity = 1;
+//             zIndex = 10;
+//           } else if (offset === -1) {
+//             transform = "translate(-50%, -50%) translateX(-250px) rotateY(35deg) scale(0.85)";
+//             zIndex = 5;
+//           } else if (offset === 1) {
+//             transform = "translate(-50%, -50%) translateX(250px) rotateY(-35deg) scale(0.85)";
+//             zIndex = 5;
+//           } else {
+//             transform = "translate(-50%, -50%) translateZ(-180px) scale(0.7)";
+//             opacity = 0.25;
+//           }
+
+//           return (
+//             <article
+//               key={project.id}
+//               className={styles.card}
+//               style={{ transform, opacity, zIndex }}
+//             >
+//               <img src={project.image} alt={project.title} className={styles.image} />
+//               <h3 className={styles.title}>{project.title}</h3>
+//               <p className={styles.description}>{project.description}</p>
+//             </article>
+//           );
+//         })}
+//       </div>
+
+//       <button
+//         className={`${styles.arrow} ${styles.right}`}
+//         onClick={(e) => { e.stopPropagation(); rotateRight(); }}
+//         aria-label="Next Project"
+//       >
+//         ›
+//       </button>
+
+//       <div className={styles.swipeHint}>SWIPE TO EXPLORE</div>
+//     </section>
+//   );
+// }
+
+
+
+
+
 "use client";
 
 import { useState, useRef } from "react";
@@ -1118,45 +1248,41 @@ export default function ProjectsCarousel() {
     const endX = e.changedTouches[0].clientX;
     const delta = startX.current - endX;
 
-    // Threshold of 35px to trigger swipe
     if (Math.abs(delta) > 35) {
       delta > 0 ? rotateRight() : rotateLeft();
     }
     startX.current = null;
   };
 
-  /* Desktop Click Logic for the Overlay */
-  const handleLayerClick = (e: React.MouseEvent) => {
-    // Only trigger if screen is wide (desktop) 
-    // and clicking the sides of the container
-    if (window.innerWidth > 768) {
-      const { clientX } = e;
-      const { innerWidth } = window;
-      if (clientX < innerWidth / 2) {
-        rotateLeft();
-      } else {
-        rotateRight();
-      }
+  /* Unified Click Logic */
+  const handleInteractionClick = (e: React.MouseEvent) => {
+    // We calculate if the click was on the left or right half of the screen
+    const { clientX } = e;
+    const { innerWidth } = window;
+    if (clientX < innerWidth / 2) {
+      rotateLeft();
+    } else {
+      rotateRight();
     }
   };
 
   return (
     <section className={styles.wrapper}>
-      {/* SWIPE & CLICK LAYER 
-          Acts as the interaction controller 
+      {/* This is the invisible controller on top. 
+        The cursor:pointer is applied here.
       */}
       <div
-        className={styles.swipeLayer}
+        className={styles.interactionLayer}
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
-        onClick={handleLayerClick}
+        onClick={handleInteractionClick}
       />
 
-      {/* DESKTOP ARROWS - Hidden via CSS on mobile */}
+      {/* Navigation Arrows */}
       <button
         className={`${styles.arrow} ${styles.left}`}
         onClick={(e) => { e.stopPropagation(); rotateLeft(); }}
-        aria-label="Previous Project"
+        aria-label="Previous"
       >
         ‹
       </button>
@@ -1164,7 +1290,7 @@ export default function ProjectsCarousel() {
       <div className={styles.scene}>
         {projects.map((project, index) => {
           const offset = getOffset(index);
-          // Show active, one left, and two right for a balanced 3D feel
+          // Standard visibility logic
           if (offset < -1 || offset > 2) return null;
 
           let transform = "";
@@ -1203,7 +1329,7 @@ export default function ProjectsCarousel() {
       <button
         className={`${styles.arrow} ${styles.right}`}
         onClick={(e) => { e.stopPropagation(); rotateRight(); }}
-        aria-label="Next Project"
+        aria-label="Next"
       >
         ›
       </button>

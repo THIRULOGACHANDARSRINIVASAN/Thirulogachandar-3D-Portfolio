@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
 import { slideInFromLeft, slideInFromBottom, slideInFromRight, slideInFromTop } from "@/utils/motion";
 import StarsCanvas from "./StarBackground";
+import BlackHoleScene from "./BlackHoleCore";
 
 const AboutMe = () => {
     return (
@@ -96,7 +97,7 @@ const AboutMe = () => {
                             ref={ref}
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
-                            variants={slideInFromLeft(0.6)}
+                            variants={slideInFromLeft(0.2)}
                             className="text-[40px] pt-[5rem] pb-3 md:p-0 font-medium text-center text-gray-200  inter-body"
                         >
                             About
@@ -116,7 +117,7 @@ const AboutMe = () => {
                             ref={ref}
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
-                            variants={slideInFromRight(0.5)}
+                            variants={slideInFromRight(0.2)}
                             className="flex flex-col items-center w-auto h-auto rounded-full overflow-hidden border-[6px] border-[#7042f88b] bg-gradient-to-r from-purple-500 to-cyan-500  hover:shadow-[0_0_30px_10px_rgba(99,102,241,0.8)] z-999 ."
                         >
                             <img src="/logo2.png" alt="profile" width={250} className="z-[10]" />
@@ -166,8 +167,8 @@ const AboutMe = () => {
                 </div>
             </div>
 
-            {/* <div className="  w-full hidden lg:flex items-start justify-center absolute -top-33.75 -z-10 lg:-top-30 xl:-top-29.5 2xl:-top-18.5 right-2.5">
-                <video
+            <div className="  w-full hidden lg:flex items-start justify-center absolute -top-33.75 -z-10 lg:-top-30 xl:-top-29.5 2xl:-top-18.5 right-2.5">
+                {/* <video
                     loop
                     muted
                     autoPlay
@@ -175,8 +176,10 @@ const AboutMe = () => {
                     preload="false"
                     className="h-full z-[-100] "
                     src="/blackhole.webm"
-                />
-            </div> */}
+                /> */}
+                {/* <BlackHoleScene></BlackHoleScene> */}
+                {/* <img src="/core2.gif" alt="alt" className="h-full z-[-100] "/> */}
+            </div> 
         </section>
     );
 };
